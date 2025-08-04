@@ -1,0 +1,43 @@
+/* Custom Styles */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, .font-poppins {
+    font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+}
+
+/* Scroll Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FAQ Accordion Icon */
+.faq-toggle-icon {
+    transition: transform 0.3s ease-in-out;
+}
+.faq-item.open .faq-toggle-icon {
+    transform: rotate(45deg);
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(to right, #2563eb, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hero Background Pattern */
+.hero-pattern {
+    background-image: radial-gradient(#dbeafe 2px, transparent 2px);
+    background-size: 30px 30px;
+}

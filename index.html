@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShiftOps | 「卒業」を目指す業務変革パートナー</title>
+    
+    <!-- ファビコン設定 -->
+    <link rel="icon" type="image/png" href="https://i.imgur.com/lK2iNRg.png">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/lK2iNRg.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-slate-800">
+
+    <!-- グローバルメニュー -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center py-4">
+                <!-- ロゴ -->
+                <div class="flex items-center">
+                    <img src="https://i.imgur.com/lK2iNRg.png" alt="ShiftOps" class="w-8 h-8 mr-2">
+                    <span class="text-2xl font-black text-blue-600">ShiftOps</span>
+                </div>
+                
+                <!-- デスクトップメニュー -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-slate-700 hover:text-blue-600 font-medium transition-colors">サービスについて</a>
+                    <a href="#value" class="text-slate-700 hover:text-blue-600 font-medium transition-colors">提供価値</a>
+                    <a href="#process" class="text-slate-700 hover:text-blue-600 font-medium transition-colors">導入プロセス</a>
+                    <a href="#faq" class="text-slate-700 hover:text-blue-600 font-medium transition-colors">よくある質問</a>
+                    <a href="#cta" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition-colors">
+                        無料相談
+                    </a>
+                </div>
+                
+                <!-- モバイルメニューボタン -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-blue-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- モバイルメニュー -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-slate-200">
+            <div class="container mx-auto px-6 py-4 space-y-4">
+                <a href="#about" class="block text-slate-700 hover:text-blue-600 font-medium py-2">サービスについて</a>
+                <a href="#value" class="block text-slate-700 hover:text-blue-600 font-medium py-2">提供価値</a>
+                <a href="#process" class="block text-slate-700 hover:text-blue-600 font-medium py-2">導入プロセス</a>
+                <a href="#faq" class="block text-slate-700 hover:text-blue-600 font-medium py-2">よくある質問</a>
+                <a href="#cta" class="block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-center transition-colors">
+                    無料相談
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative overflow-hidden pt-20">
+        <!-- 背景画像 -->
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://i.imgur.com/w23XHUD.png');">
+            <div class="absolute inset-0 bg-black/30"></div>
+        </div>
+        
+        <div class="relative z-10 container mx-auto px-6 py-16 md:py-24">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="reveal">
+                    <!-- キャッチコピー用の背景ボックス -->
+                    <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl">
+                        <!-- サービス名 -->
+                        <div class="mb-6 flex items-center justify-center">
+                            <img src="https://i.imgur.com/lK2iNRg.png" alt="ShiftOps" class="w-12 h-12 mr-3">
+                            <span class="text-2xl md:text-3xl font-black text-blue-600">ShiftOps</span>
+                        </div>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-slate-900">
+                            さよなら、<span class="gradient-text">事務代行</span>。
+                        </h1>
+                        <h2 class="mt-4 text-2xl md:text-3xl font-black leading-tight tracking-tight text-slate-900">
+                            私たちは、あなたの会社が「外注ゼロ」で自走できる未来を創るパートナーです。
+                        </h2>
+                        <p class="mt-6 max-w-2xl mx-auto text-base md:text-lg text-slate-600">
+                            ShiftOpsは、熟練スタッフによる事務代行から始め、最終的にはAIで業務プロセスそのものを自動化。コア業務に集中できる最強の営業組織へ。
+                        </p>
+                        <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                            <a href="#cta" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg py-4 px-10 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                                無料相談に申し込む
+                            </a>
+                            <a href="#cta" class="w-full sm:w-auto bg-white hover:bg-slate-100 text-blue-600 font-bold py-4 px-10 rounded-full border border-blue-200 shadow-md transition-transform transform hover:scale-105">
+                                サービス資料はこちら
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="reveal text-center">
+                    <div class="flex items-center justify-center mb-4">
+                        <img src="https://i.imgur.com/lK2iNRg.png" alt="ShiftOps" class="w-16 h-16 mr-4">
+                        <h2 class="text-3xl md:text-4xl font-black text-slate-900">経営者・営業責任者のあなたへ。</h2>
+                    </div>
+                    <p class="mt-2 text-xl md:text-2xl font-bold text-slate-700">こんなお悩み、抱えていませんか？</p>
+                </div>
+                <div class="mt-12 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="reveal bg-slate-50 p-6 rounded-xl shadow-sm">
+                        <div class="flex items-start">
+                            <span class="material-symbols-outlined text-blue-500 mr-3 mt-1 flex-shrink-0 text-2xl">schedule</span>
+                            <p class="text-slate-700"><strong>売上を伸ばしたいのに、営業担当が見積書や日報の作成に追われている。</strong><br>本来最も時間を割くべき顧客との対話や戦略立案の時間が、事務作業に奪われてしまっている。</p>
+                        </div>
+                    </div>
+                    <div class="reveal bg-slate-50 p-6 rounded-xl shadow-sm">
+                         <div class="flex items-start">
+                            <span class="material-symbols-outlined text-blue-500 mr-3 mt-1 flex-shrink-0 text-2xl">group</span>
+                            <p class="text-slate-700"><strong>人手不足で、営業事務の採用も教育もままならない。</strong><br>新しいスタッフを雇うコストも時間もない。やっと採用できても、すぐに辞めてしまい、ノウハウが蓄積されない。</p>
+                        </div>
+                    </div>
+                    <div class="reveal bg-slate-50 p-6 rounded-xl shadow-sm">
+                        <div class="flex items-start">
+                            <span class="material-symbols-outlined text-blue-500 mr-3 mt-1 flex-shrink-0 text-2xl">computer</span>
+                            <p class="text-slate-700"><strong>せっかくITツールを導入したのに、誰も使いこなせず形骸化している。</strong><br>「便利らしい」と導入したものの、現場に定着せず、逆に二度手間が発生。結局、昔ながらのやり方に戻ってしまった。</p>
+                        </div>
+                    </div>
+                    <div class="reveal bg-slate-50 p-6 rounded-xl shadow-sm">
+                         <div class="flex items-start">
+                            <span class="material-symbols-outlined text-blue-500 mr-3 mt-1 flex-shrink-0 text-2xl">support_agent</span>
+                            <p class="text-slate-700"><strong>事務代行を頼んだが、指示待ちで融通が利かず、結局マネジメントの手間が増えた。</strong><br>業務の全体像を理解してくれず、細かな指示が必要。これでは、社内のスタッフに頼むのと変わらない…。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-slate-50">
+            <div class="container mx-auto px-6 text-center">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-black text-slate-900">その場しのぎの対策では、<br class="sm:hidden">根本的な課題は解決しません。</h2>
+                </div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <div class="reveal bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                        <h3 class="text-xl font-bold text-red-600">CASE 1: 従来の「事務代行」</h3>
+                        <p class="mt-4 text-left text-slate-600">依頼した業務はこなしてくれるものの、あくまで「作業者」。貴社の事業成長まで考えてくれるわけではありません。業務プロセスに潜む根本的な非効率はそのまま残り続け、永遠にコストを払い続けることになります。</p>
+                    </div>
+                    <div class="reveal bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                        <h3 class="text-xl font-bold text-red-600">CASE 2: 「AI・ITツール」の自己流導入</h3>
+                        <p class="mt-4 text-left text-slate-600">「AIで業務が楽になる」という言葉だけを信じてツールを導入しても、多くは失敗に終わります。「どの業務を」「どのように」自動化すべきかという戦略がなければ、宝の持ち腐れ。現場の混乱を招くだけで、投資対効果は見込めません。</p>
+                    </div>
+                </div>
+                <div class="reveal mt-12">
+                    <p class="text-xl font-bold text-slate-800">大切なのは、貴社の業務全体を深く理解し、<br>未来を見据えて<span class="gradient-text">「仕組み」そのものを変革</span>することです。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-white">
+             <div class="container mx-auto px-6 text-center">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-black text-slate-900">だから、私たちは<span class="gradient-text">「卒業」</span>を目指します。</h2>
+                    <p class="mt-4 text-xl md:text-2xl font-bold text-slate-800">『代行』から始まり、『自動化による自立』へ導く<br>唯一のパートナー、ShiftOps</p>
+                    <div class="mt-8 max-w-3xl mx-auto text-left text-slate-700 space-y-4">
+                        <p>ShiftOpsは、単なる事務代行サービスではありません。私たちは、<strong>貴社が私たちのような外部サービスに頼ることなく、自社の力で効率的に業務を回せる状態（＝卒業）</strong>に到達することをゴールに設定しています。</p>
+                        <p>なぜ、そんな一見“矛盾”したことを目指すのか？ それは、私たちが貴社の<strong>「業務変革パートナー」</strong>だからです。</p>
+                        <p>私たちはまず、貴社の業務を実際に<strong>「代行」</strong>することで、社内スタッフ以上に業務プロセスを深く、客観的に理解します。ボトルネックはどこか、どの作業に時間がかかっているのかを徹底的に可視化。</p>
+                        <p>そして、その分析結果を基に、最新のAI技術を活用した<strong>最適な「自動化・省力化」の仕組みを設計し、導入・定着まで伴走</strong>します。</p>
+                        <p class="font-bold text-slate-800">最終的に、貴社自身がその仕組みを運用できるようになった時、私たちの役目は終わりです。コストを払い続ける関係ではなく、共に汗をかき、貴社の永続的な成長基盤を創り上げる。それが、ShiftOpsの約束です。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-16 md:py-24 bg-slate-50">
+            <div class="container mx-auto px-6">
+                <div class="reveal max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-200">
+                    <h2 class="text-2xl md:text-3xl font-black text-center text-slate-900">AIの専門家が、あえて<br class="sm:hidden">「泥臭い事務代行」から始める理由</h2>
+                    <div class="mt-8 text-center">
+                        <p class="text-slate-600">「ShiftOps」代表</p>
+                        <p class="text-2xl font-bold text-slate-800">[あなたの名前]</p>
+                    </div>
+                    <div class="mt-8 text-slate-700 space-y-4 text-left">
+                        <p>はじめまして、ShiftOps代表の[あなたの名前]です。</p>
+                        <p>私はこれまで、Web業界のセールスやカスタマーサポートのマネージャーとして、常にお客様の最前線に立ってきました。その後、BtoB SaaS業界でプロダクトマネージャーに転身し、現在は大企業向けのSaaS開発や、AIを活用した社内業務改革プロジェクトを率いています。実際に自社のセールス部門の生産性を20%向上させた実績もあります。</p>
+                        <p>輝かしい経歴に見えるかもしれません。しかし、そんな私がなぜ、一見すると非効率にも思える「事務代行」から始めるサービスを立ち上げたのか。</p>
+                        <p>それは、<strong>「現場を無視したDX（デジタルトランスフォーメーション）は、必ず失敗する」</strong>という事実を、これまでのキャリアで痛いほど見てきたからです。</p>
+                        <p>どんなに優れたAIやITツールも、使うのは「人」です。現場の業務フローや、担当者が本当に困っていることを深く理解せずに、「これが便利ですよ」とシステムを押し付けても、結局は使われずにホコリをかぶるだけ。</p>
+                        <p>だからこそ、私たちはまず貴社の業務に深く入り込み、社員の一員のように汗をかきます。共に業務を行う中で、データだけでは見えないボトルネックや、現場のリアルな声に耳を傾けます。</p>
+                        <p class="font-bold text-slate-800">その上で、貴社にとって本当に価値があり、現場に根付くDXだけをご提案する。遠回りに見えて、これこそが業務変革を成功させる唯一の道だと、私は確信しています。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="value" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="reveal text-center">
+                    <h2 class="text-3xl md:text-4xl font-black text-slate-900">ShiftOpsが提供する「2つの価値」</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">私たちは、即効性のある「業務代行」と、将来を見据えた「業務改革」を同時に提供します。</p>
+                </div>
+                <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <div class="reveal bg-slate-50 rounded-2xl p-8 border border-slate-200">
+                        <div class="flex items-center mb-4">
+                            <span class="material-symbols-outlined text-blue-600 text-3xl mr-3">work</span>
+                            <span class="inline-block bg-blue-100 text-blue-800 text-sm font-bold px-3 py-1 rounded-full">Part 1</span>
+                        </div>
+                        <h3 class="mt-4 text-2xl font-bold text-slate-900">熟練スタッフによる<br>「徹底的な事務代行」</h3>
+                        <p class="mt-4 text-slate-600">まずは、目の前の煩雑な業務からあなたを解放します。BtoB営業の現場を熟知した専門スタッフが、まるで貴社の社員のように能動的に業務を遂行。もう、細かな指示は必要ありません。</p>
+                        <p class="mt-6 font-bold text-slate-800">対応業務の例:</p>
+                        <ul class="mt-2 text-slate-600 list-disc list-inside space-y-1">
+                            <li>見積書・請求書・契約書の作成</li>
+                            <li>顧客リストの管理・データ入力</li>
+                            <li>営業アポイントの日程調整</li>
+                            <li>会議の議事録作成・共有</li>
+                            <li>営業資料の作成補助・アップデート</li>
+                        </ul>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">✓ 即日スタート可能</span>
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">✓ 営業現場を理解したプロ</span>
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">✓ 採用・教育コストゼロ</span>
+                        </div>
+                    </div>
+                    <div class="reveal bg-blue-50 rounded-2xl p-8 border border-blue-200">
+                        <div class="flex items-center mb-4">
+                            <span class="material-symbols-outlined text-purple-600 text-3xl mr-3">smart_toy</span>
+                            <span class="inline-block bg-purple-100 text-purple-800 text-sm font-bold px-3 py-1 rounded-full">Part 2</span>
+                        </div>
+                        <h3 class="mt-4 text-2xl font-bold text-slate-900">AIによる<br>「未来志向の業務改革支援」</h3>
+                        <p class="mt-4 text-slate-600">代行を通じて見えた課題を、AIの力で根本から解決します。高価で複雑なツールは必要ありません。貴社の状況に合わせて、身近なツールや最新AIを組み合わせ、誰でも使える「自動化の仕組み」を構築します。</p>
+                        <p class="mt-6 font-bold text-slate-800">実現できる未来の例:</p>
+                        <ul class="mt-2 text-slate-600 list-disc list-inside space-y-1">
+                            <li>問い合わせメールへのAI自動返信</li>
+                            <li>Web会議のAI自動文字起こし＆要約</li>
+                            <li>有望な見込み客をAIが自動リストアップ</li>
+                            <li>定型的な書類作成をワンクリックで完了</li>
+                        </ul>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">✓ 貴社専用の業務改革プラン</span>
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">✓ 専門知識不要</span>
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">✓ 生産性を最大化</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="process" class="py-16 md:py-24 bg-slate-50">
+            <div class="container mx-auto px-6">
+                <div class="reveal text-center">
+                    <h2 class="text-3xl md:text-4xl font-black text-slate-900">たった4ステップで実現する<br>「理想の営業体制」</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">ご契約から業務の内製化（卒業）まで、私たちが責任を持ってナビゲートします。</p>
+                </div>
+                <div class="relative mt-12 max-w-5xl mx-auto">
+                    <div class="absolute left-5 top-5 bottom-5 w-1 bg-blue-200 rounded-full md:mx-auto md:right-0 md:left-0" aria-hidden="true"></div>
+                    
+                    <div class="reveal relative mb-8 md:flex md:justify-between md:items-center">
+                        <div class="md:w-5/12"></div>
+                        <div class="hidden md:block w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-10 relative">
+                            <span class="absolute inset-0 flex items-center justify-center">1</span>
+                        </div>
+                        <div class="relative md:w-5/12 bg-white p-6 rounded-lg shadow-md border border-slate-200 ml-12 md:ml-0">
+                            <div class="md:hidden absolute -left-7 top-1/2 -translate-y-1/2 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">1</div>
+                            <p class="text-blue-600 font-bold">Step 1</p>
+                            <h3 class="mt-1 text-xl font-bold text-slate-900">【無料】業務ヒアリングと代行プランのご提案</h3>
+                            <p class="mt-2 text-slate-600">現状の課題や業務内容を丁寧にヒアリング。まずは目の前の業務を効率化するための最適な代行プランをご提案します。</p>
+                        </div>
+                    </div>
+
+                    <div class="reveal relative mb-8 md:flex md:justify-between md:items-center">
+                        <div class="relative md:w-5/12 bg-white p-6 rounded-lg shadow-md border border-slate-200 ml-12 md:ml-0 md:text-right">
+                            <div class="md:hidden absolute -left-7 top-1/2 -translate-y-1/2 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">2</div>
+                            <p class="text-blue-600 font-bold">Step 2</p>
+                            <h3 class="mt-1 text-xl font-bold text-slate-900">事務代行スタート＆業務プロセスの可視化・分析</h3>
+                            <p class="mt-2 text-slate-600">ご提案内容に納得いただけたら、すぐに代行をスタート。実際の業務を通じて、非効率な点や自動化できるポイントを専門家の視点で洗い出します。</p>
+                        </div>
+                        <div class="hidden md:block w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-10 relative">
+                            <span class="absolute inset-0 flex items-center justify-center">2</span>
+                        </div>
+                        <div class="md:w-5/12"></div>
+                    </div>
+
+                    <div class="reveal relative mb-8 md:flex md:justify-between md:items-center">
+                        <div class="md:w-5/12"></div>
+                        <div class="hidden md:block w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-10 relative">
+                            <span class="absolute inset-0 flex items-center justify-center">3</span>
+                        </div>
+                        <div class="relative md:w-5/12 bg-white p-6 rounded-lg shadow-md border border-slate-200 ml-12 md:ml-0">
+                            <div class="md:hidden absolute -left-7 top-1/2 -translate-y-1/2 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">3</div>
+                            <p class="text-blue-600 font-bold">Step 3</p>
+                            <h3 class="mt-1 text-xl font-bold text-slate-900">AIによる自動化ソリューションの導入・運用支援</h3>
+                            <p class="mt-2 text-slate-600">分析結果に基づき、貴社に最適なAI自動化ツールや仕組みを導入。現場のスタッフがスムーズに使いこなせるよう、徹底的にサポートします。</p>
+                        </div>
+                    </div>
+
+                    <div class="reveal relative md:flex md:justify-between md:items-center">
+                        <div class="relative md:w-5/12 bg-white p-6 rounded-lg shadow-md border border-slate-200 ml-12 md:ml-0 md:text-right">
+                            <div class="md:hidden absolute -left-7 top-1/2 -translate-y-1/2 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">4</div>
+                            <p class="text-blue-600 font-bold">Step 4</p>
+                            <h3 class="mt-1 text-xl font-bold text-slate-900">内製化の実現（＝ShiftOpsからの卒業）</h3>
+                            <p class="mt-2 text-slate-600">貴社のチームだけで自動化の仕組みを回せるようになったら、私たちのミッションは完了です。マニュアルの整備や最終的なトレーニングを行い、自信を持ってバトンをお渡しします。</p>
+                        </div>
+                        <div class="hidden md:block w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-10 relative">
+                            <span class="absolute inset-0 flex items-center justify-center">4</span>
+                        </div>
+                        <div class="md:w-5/12"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <div class="reveal max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-black text-slate-900">貴社の状況に合わせた<br>最適なプランをご提案します</h2>
+                    <p class="mt-6 text-lg text-slate-600">ShiftOpsは、画一的な料金プランをご用意していません。なぜなら、一社一社、抱える課題も事業フェーズも全く異なるからです。</p>
+                    <p class="mt-4 text-lg text-slate-600">まずは無料相談にて、貴社の状況や目指すゴールを詳しくお聞かせください。お伺いした内容を基に、無駄なコストを一切省いた、貴社のためだけの最適な料金プランと導入計画をオーダーメイドでご提案させていただきます。</p>
+                    <p class="mt-4 text-base text-slate-500">もちろん、ご提案内容にご納得いただけない限り、費用は一切発生いたしませんのでご安心ください。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-16 md:py-24 bg-slate-50">
+            <div class="container mx-auto px-6">
+                <div class="reveal text-center">
+                    <h2 class="text-3xl md:text-4xl font-black text-slate-900">よくあるご質問</h2>
+                </div>
+                <div class="mt-12 max-w-3xl mx-auto space-y-4">
+                    <div class="reveal faq-item bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                        <div class="faq-question flex justify-between items-center p-5 cursor-pointer">
+                            <h3 class="font-bold text-lg text-slate-800">本当に「卒業」なんてことができるのですか？</h3>
+                            <div class="faq-toggle-icon text-blue-500">
+                                <span class="material-symbols-outlined text-xl">add</span>
+                            </div>
+                        </div>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <p class="p-5 pt-0 text-slate-600">はい、私たちのゴールは、まさしく貴社が私たちから「卒業」することです。そのために、AIによる自動化の仕組みを導入するだけでなく、業務マニュアルの作成や、貴社スタッフへのトレーニングを徹底して行います。私たちが去った後も、貴社自身で業務を回せるようになるまで、責任を持って伴走しますのでご安心ください。</p>
+                        </div>
+                    </div>
+                    <div class="reveal faq-item bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                        <div class="faq-question flex justify-between items-center p-5 cursor-pointer">
+                            <h3 class="font-bold text-lg text-slate-800">どんな些細な業務からでも頼めますか？</h3>
+                            <div class="faq-toggle-icon text-blue-500">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                            </div>
+                        </div>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <p class="p-5 pt-0 text-slate-600">もちろんです。「顧客リストの整理だけ」「毎月の請求書発行だけ」といった単発の業務からでも喜んでお引き受けします。多くのお客様が、まずは小さな業務からスタートし、徐々にご依頼範囲を広げながら、最終的な業務改革へと繋げています。まずはお気軽にご相談ください。</p>
+                        </div>
+                    </div>
+                    <div class="reveal faq-item bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                        <div class="faq-question flex justify-between items-center p-5 cursor-pointer">
+                            <h3 class="font-bold text-lg text-slate-800">ITやAIに全く詳しくないのですが、大丈夫でしょうか？</h3>
+                            <div class="faq-toggle-icon text-blue-500">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                            </div>
+                        </div>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <p class="p-5 pt-0 text-slate-600">まったく問題ありません。むしろ、そういった企業様をサポートするためにShiftOpsは存在します。専門的な知識はすべて私たちにお任せください。ITが苦手な方でも直感的に使えるツールを選定し、操作方法も丁寧にご説明しますので、ご安心ください。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="py-16 md:py-24 bg-blue-600">
+            <div class="container mx-auto px-6 text-center">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-black text-white">変化を先延ばしにしますか？<br>それとも、私たちと未来へ一歩踏み出しますか？</h2>
+                    <p class="mt-6 max-w-3xl mx-auto text-lg text-blue-100">営業担当者が、本当にやるべき仕事に集中できる環境。無駄なコストや時間に悩まされず、事業成長に全リソースを投下できる体制。ShiftOpsが提供するのは、単なる業務効率化ではありません。それは、貴社の未来を創るための「時間」と「可能性」です。</p>
+                    <p class="mt-8 text-xl font-bold text-white">まずは、貴社の課題をお聞かせください。<br>私たちが、最強のパートナーとして、変革の第一歩を共に歩みます。</p>
+                    <div class="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <a href="#" class="w-full sm:w-auto bg-white hover:bg-slate-100 text-blue-600 font-bold text-lg py-4 px-10 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                            無料相談に申し込む
+                        </a>
+                        <a href="#" class="w-full sm:w-auto bg-blue-500 hover:bg-blue-400 text-white font-bold py-4 px-10 rounded-full border border-blue-400 shadow-md transition-transform transform hover:scale-105">
+                            まずは資料で導入事例をチェック
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-800 text-slate-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center mb-4">
+                <img src="https://i.imgur.com/lK2iNRg.png" alt="ShiftOps" class="w-8 h-8 mr-2">
+                <span class="text-xl font-bold text-white">ShiftOps</span>
+            </div>
+            <p>&copy; 2025 ShiftOps. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    
+    <!-- モバイルメニュー用スクリプト -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // メニューリンクをクリックしたらモバイルメニューを閉じる
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
